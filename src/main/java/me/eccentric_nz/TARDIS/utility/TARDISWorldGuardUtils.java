@@ -469,6 +469,7 @@ public class TARDISWorldGuardUtils {
             ProtectedRegion region = rm.getRegion("TARDIS_" + owner);
             region.setFlag(Flags.CHEST_ACCESS, State.DENY);
             region.setFlag(Flags.CHEST_ACCESS.getRegionGroupFlag(), RegionGroup.MEMBERS);
+            region.setFlag(Flags.CHEST_ACCESS.getRegionGroupFlag(), RegionGroup.OWNERS);
             try {
                 rm.save();
             } catch (StorageException e) {
